@@ -25,7 +25,7 @@ function setup() {
     case3= new Box(930,620,10,80);
 
 	ground = new Ground(width/2,height-20,width,20);
-	ball = new Ball(width/2,height-100,50);
+	ball = new Ball(width/4,height-100,50);
 	
 
 	//packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:1.5, isStatic:false});
@@ -55,8 +55,8 @@ function draw() {
 	 
 	 
 	 function keyPressed(){
-		if(keyCode === DOWN_ARROW){
-		 Matter.Body.applyForce(ball,{x:ball.position.x,y:ball.position.y},{x:0.03,y:-0.3});
+		if(keyCode === UP_ARROW){
+		Matter.Body.applyForce(ball.body,ball.body.position,{x:0.34,y:-0.4});
 		
 		}
 	}

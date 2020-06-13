@@ -1,11 +1,7 @@
 class Ball{
     constructor(x,y,raidus){
-        var options =  {
-            isStatic:false
-           
-        }
-
-        this.body = Bodies.circle(x,y,raidus,options);
+      
+        this.body = Bodies.circle(x,y,raidus);
         this.raidus= raidus
 
      World.add(world,this.body);
@@ -14,7 +10,7 @@ class Ball{
 
     display(){
         var pos = this.body.position;
-      fill ("purple");
+        fill ("purple");
         rectMode(CENTER);
         ellipse(pos.x,pos.y,this.raidus);
         
